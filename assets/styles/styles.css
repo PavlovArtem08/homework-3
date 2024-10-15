@@ -6,6 +6,8 @@
 
 :root {
     --white-color: #FFFFFF;
+    --black-color: black;
+    --font-size: 35px;
     font-size: 1.1em;
     line-height: 1.5em;
     text-align: center;
@@ -26,8 +28,34 @@ p {
 
 header {
     min-height: 450px;
-    color: #fff;
+    color: var(--white-color);
     text-align: center;
+}
+
+.header__container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+.header__title {
+    display: inline-block;
+    font-size: var(--font-size);
+    font-weight: 600;
+}
+
+.header__text {
+    max-width: 880px;
+    padding: 0 0 25px 0;
+    margin: 0 auto;
+    font-weight: 400;
 }
 
 .wrapper {
@@ -54,58 +82,34 @@ header {
     top: 0;
 }
 
-.header__content {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.button {
     position: relative;
-    width: 100%;
-    height: 450px;
-}
-
-.header__content-title {
-    display: inline-block;
-    font-size: 35px;
-    font-weight: 600;
-}
-
-.header__content-description {
-    max-width: 880px;
-    padding: 0 0 25px 0;
-    margin: 0 auto;
-    font-weight: 400;
-}
-
-button {
-    background: #333333df;
-    color: #fff;
     text-decoration: none;
+    height: 60px;
     padding: 1em 2em;
     border: 1px solid #666;
     margin: 0 auto;
-    height: 60px;
-    position: relative;
+    color: var(--white-color);
+    background-color: transparent;
     z-index: 12;
 }
 
-button:hover {
-    background: #FFFFFF;
-    color: black;
+.button:hover {
+    background: var(--white-color);
+    color: var(--black-color);
 }
 
-.container__text {
+.section-a {
     background: #eaeaea;
+    color: #333;
 }
 
 .content-title {
-    width: 828px;
-    font-size: 25px;
+    display: inline-block;
+    max-width: 100%;
+    font-size: 30px;
     margin: 0 auto;
-    padding: 26px 0 26px 0;
+    padding: 26px 0 20px 0;
     font-weight: 600;
 }
 
@@ -119,7 +123,8 @@ button:hover {
     margin: 0 auto;
 }
 
-.section__Offer {
+
+.section__b {
     width: 100%;
     background: #333;
 }
@@ -128,6 +133,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
     width: 880px;
     min-height: 450px;
     padding: 30px 0 30px 0;
@@ -138,7 +144,6 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background: var(--white-color);
     width: 100%;
 }
 
@@ -146,6 +151,11 @@ ul {
     width: 273px;
     height: 350px;
     padding: 26px;
+}
+
+.card {
+    background: var(--white-color);
+    margin: 0 10px
 }
 
 img {
@@ -165,11 +175,15 @@ p {
     padding: 20px 0 20px 0;
 }
 
+.content-wrap {
+    padding: 35px;
+    background: #eaeaea;
+}
+
 .container__text-text {
     width: 880px;
     margin: 0 auto;
-    padding: 20px 0 20px;
-    background: #FFFFFF;
+    padding: 35px 0 35px;
 }
 
 
@@ -178,17 +192,38 @@ p {
     align-content: center;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    width: 100%;
+    max-width: 100%;
 }
 
 .box__blue {
+    width: 50%;
     padding: 20px;
     color: var(--white-color);
     background: #2690d4;
+
 }
 
 .box__grey {
+    width: 50%;
     padding: 20px;
     color: var(--white-color);
     background: #333;
+}
+
+footer {
+    text-align: center;
+    color: var(--white-color);
+    background: black;
+    padding: 2em;
+}
+
+.container__footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.footer a {
+    color: #2690d4;
+    text-decoration: none;
 }
